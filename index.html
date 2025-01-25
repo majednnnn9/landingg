@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,7 +22,7 @@
 
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
-            padding: 3rem 2rem;
+            padding: 1.5rem 1rem;
             text-align: center;
         }
 
@@ -87,14 +88,22 @@
 
         .price-section {
             background-color: #1a1a1a;
-            padding: 2rem;
+            padding-bottom: 2rem;
+            padding-top: 0.5rem;
             border-radius: 15px;
             margin: 2rem 0;
             text-align: center;
         }
-
+        .details {
+            background-color: #1a1a1a;
+            padding-bottom: 0.5rem;
+            padding-top: 0.5rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
         .price {
-            font-size: 2.5rem;
+            font-size: 2.15rem;
             color: #ffd700;
             margin: 1rem 0;
             font-weight: bold;
@@ -241,10 +250,10 @@
         }
     </style>
 </head>
+
 <body>
     <section class="hero">
         <h1>ساعة رويال الفاخرة</h1>
-        <p>تجربة فريدة من نوعها في عالم الساعات الفاخرة</p>
     </section>
 
     <div class="container">
@@ -263,39 +272,13 @@
                 <div class="thumbnail">⌚</div>
             </div>
         </div>
-
-        <ul class="feature-list">
-            <li class="feature-item">
-                <div class="feature-icon">💎</div>
-                <div class="feature-content">
-                    <h3 class="feature-title">تصميم فاخر</h3>
-                    <p>مصنوعة من أجود أنواع المعادن والأحجار الكريمة، مع تصميم عصري يجمع بين الأصالة والحداثة</p>
-                </div>
-            </li>
-
-            <li class="feature-item">
-                <div class="feature-icon">⚙️</div>
-                <div class="feature-content">
-                    <h3 class="feature-title">دقة عالية</h3>
-                    <p>آلية حركة سويسرية فائقة الدقة تضمن أعلى مستويات الأداء والموثوقية</p>
-                </div>
-            </li>
-
-            <li class="feature-item">
-                <div class="feature-icon">💧</div>
-                <div class="feature-content">
-                    <h3 class="feature-title">مقاومة للماء</h3>
-                    <p>مقاومة للماء حتى عمق 100 متر، مثالية لجميع الأنشطة اليومية</p>
-                </div>
-            </li>
-        </ul>
-
         <div class="price-section">
-            <h2>السعر الحصري</h2>
             <div class="price">4,999 ريال</div>
-            <p>عرض محدود - يشمل الشحن المجاني والضمان لمدة سنتين</p>
+            <p> االسعر لا يشمل الشحن </p>
         </div>
-
+        <div class="details">
+            <p>تفاصيل المنتج بنهاية الصفحة</p>
+        </div>
         <div class="contact-form">
             <h2 style="text-align: center; margin-bottom: 2rem; color: #ffd700;">احجز نسختك الآن</h2>
             <form>
@@ -317,6 +300,30 @@
                 <button type="submit" class="submit-btn">احجز الآن</button>
             </form>
         </div>
+        <ul class="feature-list">
+            <li class="feature-item">
+                <div class="feature-content">
+                    <h3 class="feature-title">تصميم فاخر</h3>
+                    <p>مصنوعة من أجود أنواع المعادن والأحجار الكريمة، مع تصميم عصري يجمع بين الأصالة والحداثة</p>
+                </div>
+            </li>
+
+            <li class="feature-item">
+
+                <div class="feature-content">
+                    <h3 class="feature-title">دقة عالية</h3>
+                    <p>آلية حركة سويسرية فائقة الدقة تضمن أعلى مستويات الأداء والموثوقية</p>
+                </div>
+            </li>
+
+            <li class="feature-item">
+                <!-- <div class="feature-icon">💧</div> -->
+                <div class="feature-content">
+                    <h3 class="feature-title">مقاومة للماء</h3>
+                    <p>مقاومة للماء حتى عمق 100 متر، مثالية لجميع الأنشطة اليومية</p>
+                </div>
+            </li>
+        </ul>
     </div>
 
     <script>
@@ -328,7 +335,7 @@
                 // Remove active class from all thumbnails and images
                 thumbnails.forEach(t => t.classList.remove('active'));
                 mainImages.forEach(img => img.classList.remove('active'));
-                
+
                 // Add active class to clicked thumbnail and corresponding image
                 thumbnail.classList.add('active');
                 mainImages[index].classList.add('active');
@@ -336,4 +343,5 @@
         });
     </script>
 </body>
+
 </html>
