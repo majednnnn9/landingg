@@ -188,9 +188,17 @@
             .search-bar {
                 flex-direction: column;
             }
+
             .search-bar select {
+                appearance: none; /* لإزالة السهم الافتراضي */
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: left 0.3rem center;
+                /* موقع السهم */
+                background-size: 1.2rem;
                 width: 100%;
             }
+
             .search-bar button {
                 width: 100%;
             }
@@ -200,22 +208,29 @@
             .search-bar {
                 flex-wrap: wrap;
             }
-            
+
             .search-bar select {
+                appearance: none; /* لإزالة السهم الافتراضي */
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+                background-repeat: no-repeat;
+                background-position: left 0.3rem center;
+                /* موقع السهم */
+                background-size: 1.2rem;
                 flex: 1 1 calc(33.333% - 1rem);
                 min-width: 150px;
             }
-            
+
             .search-bar button {
                 flex: 1 1 100%;
                 margin-top: 0.5rem;
             }
         }
+
         @media (min-width: 1025px) {
             .search-bar {
                 flex-wrap: nowrap;
             }
-            
+
             .search-bar button {
                 width: auto;
                 margin-top: 0;
@@ -264,7 +279,7 @@
         </div>
     </section>
 
-    
+
 
     <section class="properties" id="propertiesContainer">
         <!-- سيتم إضافة العقارات ديناميكياً -->
@@ -274,7 +289,6 @@
         // بيانات العقارات
         const properties = [
             {
-                
                 image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914',
                 type: 'فيلا',
                 purpose: 'للبيع',
@@ -336,11 +350,9 @@
             const propertyType = document.getElementById('propertyType').value;
             const purpose = document.getElementById('purpose').value;
             const city = document.getElementById('city').value;
-        
+
             let filteredProperties = properties;
-            console.log(propertyType);
-            console.log(purpose);
-            console.log(city);
+
             if (propertyType) {
                 filteredProperties = filteredProperties.filter(p =>
                     p.type.toLowerCase().includes(propertyType.toLowerCase()));
