@@ -335,9 +335,9 @@
             const propertyType = document.getElementById('propertyType').value;
             const purpose = document.getElementById('purpose').value;
             const city = document.getElementById('city').value;
-
+        
             let filteredProperties = properties;
-
+            console.log(filteredProperties);
             if (propertyType) {
                 filteredProperties = filteredProperties.filter(p =>
                     p.type.toLowerCase().includes(propertyType.toLowerCase()));
