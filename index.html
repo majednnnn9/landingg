@@ -348,7 +348,12 @@
         </div> -->
     </nav>
 
-
+    <div id="fullscreenModal" class="fullscreen-modal">
+        <!-- <span class="close-modal" onclick="closeFullscreen()">×</span> -->
+        <!-- <div class="navigation-button prev-button" onclick="navigateImages(-1)">&#10094;</div> -->
+        <!-- <img id="fullscreenImage" class="fullscreen-image" src="" alt="صورة العقار"> -->
+        <!-- <div class="navigation-button next-button" onclick="navigateImages(1)">&#10095;</div> -->
+    </div>
 
     <div class="property-container">
         <div class="gallery-container">
@@ -358,12 +363,7 @@
                 <!-- Thumbnails will be added here via JavaScript -->
             </div>
         </div>
-       <div id="fullscreenModal" class="fullscreen-modal">
-        <span class="close-modal" onclick="closeFullscreen()">×</span>
-        <div class="navigation-button prev-button" onclick="navigateImages(-1)">&#10094;</div>
-        <img id="fullscreenImage" class="fullscreen-image" src="" alt="صورة العقار">
-        <div class="navigation-button next-button" onclick="navigateImages(1)">&#10095;</div>
-    </div>
+
         <div class="property-details">
             <div class="main-info">
                 <div class="property-header">
@@ -473,14 +473,14 @@
             currentImageIndex = index;
         }
 
-        function openFullscreen(src) {
-            const modal = document.getElementById('fullscreenModal');
-            const fullscreenImage = document.getElementById('fullscreenImage');
+        // function openFullscreen(src) {
+        //     const modal = document.getElementById('fullscreenModal');
+        //     const fullscreenImage = document.getElementById('fullscreenImage');
 
-            modal.style.display = 'flex';
-            fullscreenImage.src = src;
-            document.body.style.overflow = 'hidden';
-        }
+        //     modal.style.display = 'flex';
+        //     fullscreenImage.src = src;
+        //     document.body.style.overflow = 'hidden';
+        // }
 
         function closeFullscreen() {
             const modal = document.getElementById('fullscreenModal');
