@@ -274,6 +274,7 @@
         // بيانات العقارات
         const properties = [
             {
+                
                 image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914',
                 type: 'فيلا',
                 purpose: 'للبيع',
@@ -337,7 +338,9 @@
             const city = document.getElementById('city').value;
         
             let filteredProperties = properties;
-            console.log(filteredProperties);
+            console.log(propertyType);
+            console.log(purpose);
+            console.log(city);
             if (propertyType) {
                 filteredProperties = filteredProperties.filter(p =>
                     p.type.toLowerCase().includes(propertyType.toLowerCase()));
